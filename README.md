@@ -1,5 +1,5 @@
 # routine
-##日常代码 积累100万行
+## 日常代码 积累100万行
 ## Project setup
 ```
 yarn install
