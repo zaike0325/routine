@@ -1,0 +1,15 @@
+
+@use "sass:math";
+
+// 全局变量
+// 行高
+// 顶部导航条高度
+$header-height: 64px;
+// 块儿与块儿底部间隔
+// 网页普通文字大小
+$base-font-size: 14px;
+$font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC', 'Microsoft YaHei', 'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;
+
+// theme-light
+// body 背景色
+$bg-color: #EFF0F5;
