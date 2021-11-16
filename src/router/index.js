@@ -5,13 +5,41 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/info-overview',
-    component: () => import(/* webpackChunkName: "group-foo" */ '../views/info-overview/index'),
+    path: '/',
+    name: 'layoutsIndex',
+    component: () => import(/* webpackChunkName: "layouts" */ '../views/layouts/index'),
     children: [
       {
-        path: '/info-overview',
+        path: '/',
         name: 'info-overview',
-        component: () => import(/* webpackChunkName: "group-foo" */ '../views/info-overview/index')
+        component: () => import(/* webpackChunkName: "info-overview" */ '../views/info-overview/index')
+      },
+      {
+        path: '/hot-news',
+        name: 'hot-news',
+        component: () => import(/* webpackChunkName: "hot-news" */ '../views/hot-news/index')
+      },
+      {
+        path: '/monitor-target',
+        name: 'monitor-targets',
+        component: () => import(/* webpackChunkName: "monitor-target" */ '../views/monitor-target/index')
+      },
+      {
+        path: '/search-texts',
+        name: 'search-texts',
+        component: () => import(/* webpackChunkName: "search-texts" */ '../views/search-texts/index')
+      },
+      {
+        path: '/user',
+        name: 'user',
+        component: () => import(/* webpackChunkName: "info-overview" */ '../views/user/index'),
+        children: [
+          {
+            path: '/detail:id',
+            name: 'detail',
+            component: () => import(/* webpackChunkName: "info-overview" */ '../views/user/components/detail')
+          }
+        ]
       }
     ]
   }

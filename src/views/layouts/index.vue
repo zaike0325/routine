@@ -1,20 +1,24 @@
 <template>
-    <div>
-        <header-index></header-index>
-        <router-view></router-view>
-    </div>
+<el-container>
+ <el-header>
+     <header-top></header-top>
+ </el-header>
+  <el-main>
+     <router-view></router-view>
+  </el-main>
+</el-container>
 </template>
 
 <script>
-import { headerIndex } from './components/header.vue'
-export default ({
-  name: 'layoutIndex',
+import headerTop from './components/header-top'
+export default {
+  name: 'layout',
   components: {
-    headerIndex
+    headerTop
   }
-})
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
