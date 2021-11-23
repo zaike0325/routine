@@ -1,7 +1,11 @@
 <template>
     <div>
-      <left-nav></left-nav>
-      <div>asdasdasdasd</div>
+      <div>
+          <left-nav></left-nav>
+      </div>
+      <div>
+        <router-view></router-view>
+      </div>
     </div>
 </template>
 
