@@ -8,9 +8,10 @@ const routes = [
     path: '/',
     name: 'layoutsIndex',
     component: () => import(/* webpackChunkName: "layouts" */ '../views/layouts/index'),
+    redirect: '/info-overview',
     children: [
       {
-        path: '/',
+        path: '/info-overview',
         name: 'info-overview',
         component: () => import(/* webpackChunkName: "info-overview" */ '../views/info-overview/index')
       },

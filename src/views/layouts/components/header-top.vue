@@ -12,11 +12,11 @@ export default {
   data () {
     return {
       titleList: [
-        { name: '数据概览', url: '/info-overview' },
-        { name: '全文检索', url: '/search-texts' },
-        { name: '热点事件', url: '/hot-news' },
-        { name: '事件监控', url: '/monitor-target' },
-        { name: '运营信息', url: '/user' }
+        { name: '哈哈哈1', url: '/info-overview' },
+        { name: '哈哈哈2', url: '/search-texts' },
+        { name: '哈哈哈3', url: '/hot-news' },
+        { name: '哈哈哈4', url: '/monitor-target' },
+        { name: '哈哈哈5', url: '/user' }
       ]
     }
   }
