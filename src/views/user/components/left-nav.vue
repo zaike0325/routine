@@ -21,18 +21,19 @@
         <div class="line" ref="line"></div>
         <li v-for="(item,idx) in tabsList" :class="idx==index?'active':''" @click="son(item,idx)" :key="item.key">{{item.name}}</li>
       </ul> -->
-      <!-- <div class="page-box">
+      <div class="page-box">
       <span class="demonstration" @click="goBack()" v-show="currentPage!=1">首页</span>
       <el-pagination
-        prev-text="上一页"
-        next-text="下一页"
+        background
+        prev-text="<上一页"
+        next-text="下一页>"
         @current-change="handleChangeSize"
         :current-page="currentPage"
         layout="prev, pager, next,slot"
         :total="1000">
       </el-pagination>
-    </div> -->
-<div>
+    </div>
+<!-- <div>
   <div class="block">
     <span class="demonstration">默认</span>
     <el-date-picker
@@ -43,7 +44,7 @@
     >
     </el-date-picker>
   </div>
-</div>
+</div> -->
 </template>
 
 <script setup>
@@ -78,30 +79,30 @@ export default {
     }
   },
   watch: {
-    // currentPage: {
-    //   immediate: true,
-    //   deep: true,
-    //   handler (val, oldVal) {
-    //     // console.log(oldVal, val)
-    //     if (val === 1) {
-    //       setTimeout(() => {
-    //         document.querySelector('.btn-prev').style.display = 'none'
-    //       }, 10)
-    //     } else {
-    //       setTimeout(() => {
-    //         document.querySelector('.btn-prev').style.display = 'inline-block'
-    //       }, 10)
-    //     }
-    //   }
-    // }
+    currentPage: {
+      immediate: true,
+      deep: true,
+      handler (val, oldVal) {
+        // console.log(oldVal, val)
+        if (val === 1) {
+          setTimeout(() => {
+            document.querySelector('.btn-prev').style.display = 'none'
+          }, 10)
+        } else {
+          setTimeout(() => {
+            document.querySelector('.btn-prev').style.display = 'inline-block'
+          }, 10)
+        }
+      }
+    }
   },
   methods: {
-    // handleChangeSize (page) {
-    //   this.currentPage = page
-    // },
-    // goBack () {
-    //   this.currentPage = 1
-    // }
+    handleChangeSize (page) {
+      this.currentPage = page
+    },
+    goBack () {
+      this.currentPage = 1
+    },
 
     // 下拉点击事件
     handleCommand (command) {

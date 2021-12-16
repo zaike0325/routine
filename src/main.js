@@ -6,7 +6,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+import VoerroTagsInput from '@voerro/vue-tagsinput'
+import '@voerro/vue-tagsinput/dist/style.css'
+Vue.component('tags-input', VoerroTagsInput)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
