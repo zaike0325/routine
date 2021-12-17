@@ -86,14 +86,39 @@ export default {
     // }
   }
 }
-const guid = (function () {
-  var t = new Date().getTime()
-  var uid = 0
-  return function (prefix) {
-    return (prefix != null ? prefix : '') + (t + uid++).toString(16)
+// const guid = (function () {
+//   var t = new Date().getTime()
+//   var uid = 0
+//   return function (prefix) {
+//     return (prefix != null ? prefix : '') + (t + uid++).toString(16)
+//   }
+// })()
+// console.log(guid(123))
+function dateFormat (date, fmt = 'yyyy-mm-dd') {
+  date = new Date(date)
+
+  let ret
+  const opt = {
+    'y+': date.getFullYear().toString(), // 年
+    'm+': (date.getMonth() + 1).toString(), // 月
+    'd+': date.getDate().toString(), // 日
+    'h+': date.getHours().toString(), // 时
+    'i+': date.getMinutes().toString(), // 分
+    's+': date.getSeconds().toString() // 秒
   }
-})()
-console.log(guid(123))
+
+  for (const k in opt) {
+    ret = new RegExp('(' + k + ')').exec(fmt)
+
+    if (ret) {
+      fmt = fmt.replace(ret[1], (ret[1].length === 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, '0')))
+    }
+  }
+
+  return fmt
+}
+console.log(dateFormat(new Date(), '2010-1-6'))
+// console.log(time, '=')
 </script>
 
 <style lang="scss" scoped>
