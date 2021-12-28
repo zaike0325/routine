@@ -18,12 +18,12 @@ export default {
 // Promise.resolve().then(() => { console.log('promise1') })
 //   .then(() => { console.log('promise2') })
 //   .then(() => { console.log('promise3') })
-let uid = 0
-var config = {
-  id: 0
-}
-config.id = uid++
-console.log(config.id)
+// let uid = 0
+// var config = {
+//   id: 0
+// }
+// config.id = uid++
+// console.log(config.id)
 </script>
 
 <style lang="scss" scoped>
