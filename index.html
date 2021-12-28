@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Penson(age){
+        //     this.age = age
+        // }
+        // const penson = new Penson(50)
+        // console.log(penson.constructor === Penson)
+        // console.log(penson.constructor)
+
+        // function penson2(age){
+        //     this.age = age
+        //     // return this.age
+        // }
+        // const penson = penson2(50)
+        // console.log(penson.constructor)
+
+        // function penson3(age){
+        //     // return{
+        //     //     age:age
+        //     // }
+        //     this.age =age
+        //     return this.age
+        // }
+        // const penson = penson3(50)
+        // console.log(penson.constructor === penson3)
+        // console.log(penson.constructor === Object)
+        // console.log(penson.constructor === Number)
+
+        // const num = 50;
+        // console.log(num.constructor)
+
+
+        // const newName = new Symbol(123)
+        // console.log(newName)
+        // const newName = Symbol(123)
+        // console.log(newName)
+        // console.log(newName.constructor)
+        // const oldName = Symbol(123)
+        // console.log(newName === oldName)
+
+
+        // function Foo(){
+        //     this.value = 42
+        // }
+        // Foo.prototype = {
+        //     method:function(){}
+        // }
+
+        // function Bar(){}
+
+        // Bar.prototype = new Foo()
+        // Bar.prototype.foo = 'hello world'
+
+        // console.log(Bar.prototype.constructor === Object)
+
+        // // Bar.prototype.constructor = Bar
+
+        // const test = new Bar()
+        // console.log(test)
+
+        // function Penson(age){
+        //     this.age = age
+        // }
+
+        // const penson = new Penson()
+        // console.log(Penson.prototype.constructor === Penson)
+        // console.log(penson.constructor === Penson)
+        // console.log(Penson.prototype === penson.__proto__)
+        // console.log(penson.__proto__.__proto__ === Object.prototype)
+        // console.log(penson.__proto__.__proto__.__proto__ === null)
+        // console.log(Function.__proto__.__proto__ === Object.prototype)
+
+
+
+    //     function extend(to,_form){
+    //         for(let key in _form){
+    //             to[key] = _form[key]
+    //         }
+    //         return to
+    //     }
+    //     // console.log(extend({},[1,2,3,4,5]))
+    //    function toObject(arr) {
+    //     var res = {};
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i]) {
+    //         extend(res, arr[i]);
+    //         }
+    //     }
+    //     return res;
+    //     };
+    //     let arr = [
+    //         {name:'zaike',age:'23'},
+    //         {name:'bar',age:'12'},
+    //         {name:'foo',age:'42'},
+    //     ]
+    //     console.log(toObject(arr))
+
+// 获取传递的字符串和对象，没有映射关系的项
+// function getValueByPath(object, prop) {
+//   prop = prop || '';
+//   const paths = prop.split('.');
+//   let current = object;
+//   let result = null;
+//   for (let i = 0, j = paths.length; i < j; i++) {
+//     const path = paths[i];
+//     if (!current) break;
+
+//     if (i === j - 1) {
+//       result = current[path];
+//       break;
+//     }
+//     current = current[path];
+//   }
+//   return result;
+// }
+// var obj = { aaa: { bbb: { ccc: 123 } } }
+// var prop="aaa.bbb"
+// console.log(getValueByPath(obj, prop))
+ 
+// var prop="aaa.bbb.ccc"
+// console.log(getValueByPath(obj, prop))
+
+// console.log(getValueByPath({www:'hah',qwe:'123',com:'ahah'},'www.qwe.com'))
+</script>
+</body>
+</html>
